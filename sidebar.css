@@ -1,0 +1,49 @@
+.main-content {
+    display: flex;
+    flex-wrap: wrap; /* 允许子元素换行 */
+    padding: 20px; /* 设置整体边距 */
+    transition: all 0.3s ease-in-out; /* 添加过渡效果，使页面的调整更平滑 */
+    margin-right: 300px; /* 初始状态为侧栏留出空间 */
+}
+
+.article-content {
+    flex: 1 1 100%; /* 默认占据父容器的全部可用空间 */
+    background: #fff;
+    padding: 1.5rem;
+    margin: 1.5rem auto; /* 上下左右居中对齐 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* 限制文章内容的最大宽度，以保持良好的阅读体验 */
+    transition: all 0.3s ease-in-out; /* 平滑的过渡效果 */
+}
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 100px;
+    width: 280px;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* 添加平滑隐藏和显示效果 */
+}
+
+.sidebar.hidden {
+    transform: translateX(100%); /* 将侧栏移出视野 */
+}
+
+.toggle-sidebar-btn {
+    position: fixed;
+    top: 120px;
+    right: 300px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+}
+
+.toggle-sidebar-btn.hidden {
+    right: 20px; /* 隐藏侧栏时，按钮紧靠右侧 */
+}

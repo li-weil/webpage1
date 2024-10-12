@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>为什么你要有老板思维 - InsightPulse</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引用与主页相同的 CSS 文件 -->
+    <link rel="stylesheet" href="sidebar.css"> <!-- 引用侧栏的 CSS 文件 -->
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .main-content {
+            min-height: calc(100vh - 160px); /* Adjust to ensure footer stays at the bottom */
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Navigation Bar -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">InsightPulse</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="blog_article.html">Blog Article</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Toggle Sidebar Button -->
+        <button id="toggleSidebar" class="toggle-sidebar-btn">Hide Sidebar</button>
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <!-- Article Section -->
+            <section class="article-content">
+                <h2>为什么你要有老板思维</h2>
+                <p>作者：蔡叔</p>
+                <p>发布日期：2024年10月9日</p>
+                <p>文章主题：Business & Leadership</p>
+                <p>(文章内容请参考现在代码中的详细内容)</p>
+            </section>
+
+            <!-- Sidebar Section -->
+            <aside class="sidebar">
+                <h3>Other Articles</h3>
+                <ul>
+                    <li><a href="article2.html">Article Title 1</a></li>
+                    <li><a href="article3.html">Article Title 2</a></li>
+                    <li><a href="article4.html">Article Title 3</a></li>
+                </ul>
+            </aside>
+        </div>
+        
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 InsightPulse. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a> |
+                <a href="#">LinkedIn</a> |
+                <a href="#">YouTube</a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="sidebar.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleSidebarBtn = document.getElementById('toggleSidebar');
+        const sidebar = document.querySelector('.sidebar');
+        const mainContent = document.querySelector('.main-content');
+
+        toggleSidebarBtn.addEventListener('click', function () {
+            if (sidebar.style.display === 'none') {
+                sidebar.style.display = 'block';
+                toggleSidebarBtn.textContent = 'Hide Sidebar';
+            } else {
+                sidebar.style.display = 'none';
+                toggleSidebarBtn.textContent = 'Show Sidebar';
+            }
+        });
+    });
+</script>
+</html>
